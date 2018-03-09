@@ -1,10 +1,12 @@
-const snek = require('snekfetch');
+var snek = require('snekfetch');
 
 module.exports = {
     run: async (client, msg, args) => {
-        let m = await msg.channel.send('<a:skyloading:397962260540293120> Fetching a random cat... Just one sec! 🐱');
+        let m = await msg.channel.send(':cat: Getting a random cat picture :cat:')
         const r = await snek.get('http://random.cat/meow');
-        m.edit('🐱 Here you go...', { files: [r.body.file] });
+        
+        await msg.channel.send(':cat: Here is a random cat picture... :cat:', { files: [r.body.file] });
+         m.delete()
     },
     meta: {
         name: 'cat',
