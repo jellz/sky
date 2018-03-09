@@ -4,6 +4,10 @@ const snek = require('snekfetch');
 module.exports = {
     run: async (client, msg, args) => {
         if (!args[0]) return msg.channel.send(`\\❌ You need to provide a word to get the definition for.`);
+        const m = await msg.channel.send(`<a:skyloading:397962260540293120> Getting definition for \`${args.join(' ')}\`..`);    
+        const { body } = await snekfetch.get('https://api.urbandictionary.com/v0/define').query({ term: args.join(' ') });        
+        if (body.result_type === 'no_results') return m.edit(`\\❌ No results found.`);        
+        const [answer] = body.list;
         const m = await msg.channel.send(`<a:skyloading:397962260540293120> Getting definition for \`${args.join(' ')}\`...`);    
         const { body } = await snek.get('https://api.urbandictionary.com/v0/define').query({ term: args.join(' ') });        
         if (body.result_type == 'no_results') return m.edit(`\\❌ No results found.`);        
