@@ -7,7 +7,7 @@ module.exports = {
             if (!target) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.name + ' ' + module.exports.meta.usage}\`\`\``);
             if (!args[2] || isNaN(args[2])) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.name + ' ' + module.exports.meta.usage}\`\`\``);
             const obj = db.get(target.id).run();
-            obj['points'] += args[2];
+            obj['points'] += parseInt(args[2]);
             db.get(target.id).update(obj).run().then(() => () => {
                 msg.channel.send(`\\✅ Updated points of ${target.tag} (**${args[2].startsWith('-') ? '' : '+'}${args[2]}**).`);
             });
@@ -16,7 +16,7 @@ module.exports = {
             if (!target) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.name + ' ' + module.exports.meta.usage}\`\`\``);
             if (!args[2] || isNaN(args[2])) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.name + ' ' + module.exports.meta.usage}\`\`\``);
             const obj = db.get(target.id).run();
-            obj['points'] = args[2];
+            obj['points'] = parseInt(args[2]);
             db.get(target.id).update(obj).run().then(() => () => {
                 msg.channel.send(`\\✅ Updated points of ${target.tag} (**=${args[2]}**).`);
             });            
