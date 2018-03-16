@@ -1,6 +1,6 @@
 module.exports = {
     run: async (client, msg, args) => {
-        if (!args[0]) return msg.channel.send('\\❌ Please provide a command to execute.');
+        if (!args[0]) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${meta.usage}\`\`\``);
         require('child_process').exec(args.join(' '), (error, stdout, stderr) => {
             if (error) {
                 msg.channel.send(error);
