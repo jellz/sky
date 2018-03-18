@@ -13,7 +13,7 @@ module.exports = {
         points.lastDaily = new Date().getTime();
         points.points+=10;
         await r.table("globalPoints").get(msg.author.id).update(points).run();
-        msg.channel.send("\\🎉 You got 10 points!");
+        msg.channel.send("\\🎉 You got 100 points!");
     },
     meta: {
         name: 'daily',
