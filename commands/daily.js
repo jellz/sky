@@ -11,7 +11,7 @@ module.exports = {
             if (until < waiting) return msg.channel.send(`\\❌ You've already ran this command today! Try again ${formatted}.`)
         }
         points.lastDaily = new Date().getTime();
-        points.points+=10;
+        points.points += 100
         await r.table("globalPoints").get(msg.author.id).update(points).run();
         msg.channel.send("\\🎉 You got 100 points!");
     },
