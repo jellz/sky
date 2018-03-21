@@ -20,7 +20,7 @@ module.exports = {
         }
     },
     meta: {
-        name: 'reversenick',
+        aliases: ['reversenick'],
         ownerOnly: true,
         description: '(Dev command, not to be used outside of dev guild!) Reverses nickname of target, if no target specified: reverses nicknames of everyone in the server.',
         usage: '[%mention%|%user ID%]'

@@ -12,7 +12,7 @@ module.exports = {
         msg.channel.send(leaderboard.join('\n'));
     },
     meta: {
-        name: 'lb',
+        aliases: ['leaderboard', 'lb'],
         ownerOnly: false,
         description: 'View the Sky leaderboard.',
         usage: ''

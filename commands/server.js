@@ -25,7 +25,7 @@ module.exports = {
         msg.channel.send(info);
     },
     meta: {
-        name: 'server',
+        aliases: ['server', 'serverinfo', 'guild', 'guildinfo'],
         ownerOnly: false,
         description: 'Displays information about the target server.',
         usage: '[%server ID%]'

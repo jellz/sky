@@ -4,7 +4,7 @@ module.exports = {
         m.edit(`\\🏓 Pong! (Roundtrip: ${m.createdTimestamp - msg.createdTimestamp}ms | One-way: ${~~client.ping}ms)`);
     },
     meta: {
-        name: 'ping',
+        aliases: ['ping', 'pong'],
         ownerOnly: false,
         description: 'Ping, pong!',
         usage: ''

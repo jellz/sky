@@ -22,7 +22,7 @@ module.exports = {
         });
     },
     meta: {
-        name: 'commands',
+        aliases: ['commands', 'cmdlist'],
         ownerOnly: false,
         description: 'Returns a list of all available Sky commands.',
         usage: ''

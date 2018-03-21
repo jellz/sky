@@ -7,7 +7,7 @@ module.exports = {
         msg.channel.send('Here is a random cat picture...', { files: [r.body.file] });
     },
     meta: {
-        name: 'cat',
+        aliases: ['cat'],
         ownerOnly: false,
         description: 'Return a picture of a cat. Cuteness not guaranteed.',
         usage: ''

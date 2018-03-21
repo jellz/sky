@@ -30,7 +30,7 @@ module.exports = {
         }, 7000);
     },
     meta: {
-        name: 'bet',
+        aliases: ['bet', 'gamble'],
         ownerOnly: true,
         description: 'Test your luck by gambling Sky Points™.',
         usage: '<%amount of points%>'

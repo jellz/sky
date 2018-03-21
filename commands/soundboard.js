@@ -21,7 +21,7 @@ module.exports = {
         } 
     },
     meta: {
-        name: 'sb',
+        aliases: ['soundboard', 'sb'],
         ownerOnly: false,
         description: 'Control the \\🎵 soundboard! \\🎵',
         usage: '<list|%sound name%>'

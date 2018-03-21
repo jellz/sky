@@ -19,7 +19,7 @@ module.exports = {
         }
     },
     meta: {
-        name: 'eval',
+        aliases: ['eval', 'ev'],
         ownerOnly: true,
         description: 'Evaluates raw Javascript.',
         usage: '<%expression%>'

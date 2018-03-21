@@ -5,7 +5,7 @@ module.exports = {
         msg.channel.send(`\\✅ Reloaded command \`${args[0]}\`.`);
     },
     meta: {
-        name: 'reload',
+        aliases: ['reload', 'rl'],
         ownerOnly: true,
         description: 'Reloads the specified command.',
         usage: '<%command name%>'

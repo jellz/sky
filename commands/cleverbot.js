@@ -9,7 +9,7 @@ module.exports = {
         });
     },
     meta: {
-        name: 'cb',
+        aliases: ['cleverbot', 'cb'],
         ownerOnly: false,
         description: 'Talk with the Sky cleverbot.',
         usage: '<%input%>'

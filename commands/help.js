@@ -63,9 +63,9 @@ module.exports = {
         
     },
     meta: {
-        name: 'help',
+        aliases: ['help', 'ahh', 'helpme'],
         ownerOnly: false,
-        description: 'I\'m stuck Where do I go? Oh! Thanks Sky, the extremely helpful bot.',
+        description: 'I\'m stuck Where do I go? Oh! Thanks Sky, the helpful bot.',
         usage: '[%category%]'
     }
 }

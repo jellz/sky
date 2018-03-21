@@ -19,7 +19,7 @@ module.exports = {
         }   
     },
     meta: {
-        name: 'points',
+        aliases: ['points', 'mypoints', 'balance', 'bal'],
         ownerOnly: false,
         description: 'Displays Sky Points\\™ profile of target.',
         usage: '[%mention%|%user ID%]'

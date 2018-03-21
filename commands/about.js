@@ -15,7 +15,7 @@ module.exports = {
         msg.channel.send(info);
     },
     meta: {
-        name: 'about',
+        aliases: ['about', 'info'],
         ownerOnly: false,
         description: 'Displays information about Sky.',
         usage: ''

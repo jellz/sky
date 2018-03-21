@@ -11,7 +11,7 @@ module.exports = {
         m.edit(`\\✅ Done! You can view the file @ <https://cdn.jellz.fun/${msg.id}-guilds.txt>`);   
     },
     meta: {
-        name: 'guildlog',
+        aliases: ['guildlog'],
         ownerOnly: true,
         description: 'Dump a log of all guilds the bot is currently in.',
         usage: ''

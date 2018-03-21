@@ -6,7 +6,7 @@ module.exports = {
         m.edit(`\\😀 Avatar of **${target.tag}**...\n${target.avatarURL()}`);        
     },
     meta: {
-        name: 'avatar',
+        aliases: ['avatar'],
         ownerOnly: false,
         description: 'Displays the avatar of the target user.',
         usage: '[%mention%|%user ID%]'

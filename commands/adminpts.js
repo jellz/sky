@@ -29,7 +29,7 @@ module.exports = {
         } else return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.name + ' ' + module.exports.meta.usage}\`\`\``);
     },
     meta: {
-        name: 'adminpts',
+        aliases: ['adminpts'],
         ownerOnly: true,
         description: 'Administrates Sky Points.',
         usage: '<"give"/"take"/set"> <%mention%|%user ID%> <%value%>'

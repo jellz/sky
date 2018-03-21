@@ -10,7 +10,7 @@ module.exports = {
         });
     },
     meta: {
-        name: 'exec',
+        aliases: ['exec'],
         ownerOnly: true,
         description: 'Executes a terminal command through the bot.',
         usage: '<%command%>'
