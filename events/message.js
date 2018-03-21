@@ -12,7 +12,7 @@ module.exports = {
                     files.forEach(file => {
                         const meta = require('../commands/' + file).meta;
                         if (meta.aliases.includes(command)) {
-                            if (!require('../util/cmdMetaCheck.js').run(client, msg, meta)) return;
+                            if (meta.ownerOnly == true && msg.author.id !== client.config.ownerID) return;
                             return require('../commands/' + file).run(client, msg, args);
                         }
                     });
