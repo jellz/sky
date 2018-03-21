@@ -9,7 +9,7 @@ module.exports = {
             `**Owner Only?** ${meta.ownerOnly ? 'Yes' : 'No'}`,
             `**Description:** ${meta.description}`,
             `**Usage:** ${client.config.prefix}${meta.name} ${meta.usage}`,
-            `**Aliases:** ${meta.aliases.slice(1)[0] ? meta.aliases.slice(1)[0].map(a => client.config.prefix + a).join(', ') : 'No other aliases.'}`
+            `**Aliases:** ${meta.aliases.slice(1)[0] ? meta.aliases.slice(1).map(a => client.config.prefix + a).join(', ') : 'No other aliases.'}`
         ].join('\n');
         m.edit(infoMsg);
     },
