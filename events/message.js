@@ -1,3 +1,4 @@
+const fs = require('fs');
 module.exports = {
     run: async (client, msg) => {
         if (msg.author.bot) return;
@@ -6,12 +7,19 @@ module.exports = {
             const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g);
             const command = args.shift().toLowerCase();
             try {
-                const commandFile = require(`../commands/${command}.js`);
-                if (!require('../util/cmdMetaCheck.js').run(client, msg, commandFile)) return;
-                commandFile.run(client, msg, args);
+                fs.readdir('../commands', (err, files) => {
+                    if (err) return console.error(err);
+                    files.forEach(file => {
+                        const meta = require('../commands/' + file).meta;
+                        if (meta.aliases.includes(command)) {
+                            if (!require('../util/cmdMetaCheck.js').run(client, msg, meta)) return;
+                            return require('../commands/' + file).run(client, msg, args);
+                        }
+                    });
+                });
             } catch (err) {
-                if (err.toString().toLowerCase().includes('cannot find module')) return;       
-                client.error(client, err.stack, `(Message Handler) Command Run`, `**cmd:** ${msg.content} **user:** ${msg.author.tag} (${msg.author.id}) **guild:** ${msg.guild.name} (${msg.guild.id})`);
+                msg.channel.send('An error occurred.');
+                console.error(err);
             }
         } else {
             const guildDbInfo = await client.db.table('guildConfig').get(msg.guild.id).run();
