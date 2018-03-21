@@ -10,7 +10,7 @@ module.exports = {
                 if (metaCheck.aliases.includes(args[0].toLowerCase())) meta = metaCheck;
             });
         });
-        if (!mainName) return msg.channel.send('\\❌ Command not found.');
+        if (!meta) return msg.channel.send('\\❌ Command not found.');
         const m = await msg.channel.send('<a:skyloading:397962260540293120> Fetching command data...');
         const infoMsg = [
             `\\❓ **__Command Info:__** ${meta.aliases[0]} \\❓`,
