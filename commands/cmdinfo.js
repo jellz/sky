@@ -2,15 +2,15 @@ const fs = require('fs');
 module.exports = {
     run: async (client, msg, args) => {
         if (!args[0]) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.aliases[0] + ' ' + module.exports.meta.usage}\`\`\``);
-        const m = {};
+        const me = {};
         fs.readdir('commands', (err, files) => {
             if (err) return console.error(err);
             files.forEach(file => {
                 const metaCheck = require('../commands/' + file).meta;
-                if (metaCheck.aliases.includes(args[0].toLowerCase())) m.meta = metaCheck;
+                if (metaCheck.aliases.includes(args[0].toLowerCase())) me.meta = metaCheck;
             });
         });
-        let meta = m.meta;
+        let meta = me.meta;
         if (!meta) return msg.channel.send('\\❌ Command not found.');
         const m = await msg.channel.send('<a:skyloading:397962260540293120> Fetching command data...');
         const infoMsg = [
