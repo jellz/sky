@@ -10,7 +10,7 @@ module.exports = {
     },
     meta: {
         name: 'cb',
-        ownerOnly: true,
+        ownerOnly: false,
         description: 'Talk with the Sky cleverbot.',
         usage: '<%input%>'
     }
