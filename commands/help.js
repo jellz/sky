@@ -41,7 +41,7 @@ module.exports = {
             ].join('\n');
             msg.channel.send(helpPoints);
         } else if (args[0].toLowerCase() === 'cleverbot' || args[0].toLowerCase() === 'ai') {
-            return msg.channel.send('Cleverbot is currently disabled.');
+            // return msg.channel.send('Cleverbot is currently disabled.');
             // return msg.channel.send('Cleverbot has been permanently removed from Sky. This was not due to financial issues, it was due to some technical backend issues. Sorry for the inconvenience!');
             const helpCleverbot = [
                 '__Help for **Cleverbot**__',
