@@ -7,7 +7,7 @@ module.exports = {
             const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g);
             const command = args.shift().toLowerCase();
             try {
-                fs.readdir('../commands', (err, files) => {
+                fs.readdir('commands', (err, files) => {
                     if (err) return console.error(err);
                     files.forEach(file => {
                         const meta = require('../commands/' + file).meta;
