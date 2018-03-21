@@ -1,6 +1,5 @@
 module.exports = {
     run: async (client, msg, args) => {
-        const categories = ['points'];
         const r = client.db;
         if (!args[0]) {
             const helpMain = [
