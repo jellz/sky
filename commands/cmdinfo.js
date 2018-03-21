@@ -4,11 +4,12 @@ module.exports = {
         const meta = require(`../commands/${args[0].toLowerCase()}`).meta;
         const m = await msg.channel.send('<a:skyloading:397962260540293120> Fetching command data...');
         const infoMsg = [
-            `\\❓ **__Command Info:__** ${meta.name} \\❓`,
+            `\\❓ **__Command Info:__** ${meta.aliases[0]} \\❓`,
             ``,
             `**Owner Only?** ${meta.ownerOnly ? 'Yes' : 'No'}`,
             `**Description:** ${meta.description}`,
-            `**Usage:** ${client.config.prefix}${meta.name} ${meta.usage}`
+            `**Usage:** ${client.config.prefix}${meta.name} ${meta.usage}`,
+            `**Aliases:** ${meta.aliases.slice(0, 1)[0] ? meta.aliases.slice(0, 1)[0].map(a => client.config.prefix + a).join(', ') : 'No other aliases.'}`
         ].join('\n');
         m.edit(infoMsg);
     },
