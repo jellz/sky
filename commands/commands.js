@@ -6,10 +6,12 @@ module.exports = {
             const commands = [];                
             if (err) return console.error(err);
             files.forEach(file => {
+                const meta = require('../commands/' + file).meta;
+                const cmdname = meta.aliases[0];
                 if (msg.author.id !== client.config.ownerID) {
-                    if (!require(`../commands/${file}`).meta.ownerOnly) commands.push(client.config.prefix + file.split('.')[0]);
+                    if (!require(`../commands/${file}`).meta.ownerOnly) commands.push(client.config.prefix + cmdname);
                 } else {
-                    commands.push(client.config.prefix + file.split('.')[0]);
+                    commands.push(client.config.prefix + cmdname);
                 }
             });
             const cmdMsg = [
