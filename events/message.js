@@ -10,10 +10,10 @@ module.exports = {
                 fs.readdir('commands', (err, files) => {
                     if (err) return console.error(err);
                     files.forEach(file => {
-                        const meta = require('commands/' + file).meta;
+                        const meta = require('../commands/' + file).meta;
                         if (meta.aliases.includes(command)) {
                             if (meta.ownerOnly == true && msg.author.id !== client.config.ownerID) return;
-                            return require('commands/' + file).run(client, msg, args);
+                            return require('../commands/' + file).run(client, msg, args);
                         }
                     });
                 });
