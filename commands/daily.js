@@ -15,7 +15,7 @@ module.exports = {
         if (amount < 25) {amount += 25}
         points.points += amount
         await r.table('globalPoints').get(msg.author.id).update(points).run();
-        msg.channel.send('\\🎉 You got ' + amount +' points!');
+        msg.channel.send('\\🎉 You got ' + amount + ' points!');
     },
     meta: {
         aliases: ['daily'],
