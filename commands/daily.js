@@ -11,9 +11,11 @@ module.exports = {
             if (until < waiting) return msg.channel.send(`\\❌ You've already ran this command today! Try again ${formatted}.`);
         }
         points.lastDaily = new Date().getTime();
-        points.points += 100
+        var amount = Math.round(Math.random() * 200) // Give amount of points upto 200 and greater than 25...
+        if (amount < 25) {amount += 25}
+        points.points += amount
         await r.table('globalPoints').get(msg.author.id).update(points).run();
-        msg.channel.send('\\🎉 You got 100 points!');
+        msg.channel.send('\\🎉 You got ' + amount +' points!');
     },
     meta: {
         aliases: ['daily'],
