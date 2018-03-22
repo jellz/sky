@@ -17,7 +17,7 @@ module.exports = {
     },
     meta: {
         aliases: ['daily'],
-        ownerOnly: true,
+        ownerOnly: false,
         description: 'Get daily points!',
         usage: ''
     }
