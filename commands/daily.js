@@ -16,7 +16,7 @@ module.exports = {
         msg.channel.send('\\🎉 You got 100 points!');
     },
     meta: {
-        name: 'daily',
+        aliases: ['daily'],
         ownerOnly: true,
         description: 'Get daily points!',
         usage: ''
