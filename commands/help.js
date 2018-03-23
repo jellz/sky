@@ -19,7 +19,7 @@ module.exports = {
             ].join('\n');
             msg.channel.send(helpMain);
         } else if (args[0].toLowerCase() === 'points' || args[0].toLowerCase() === 'pts') {
-            const pointsCmds = [`\`${client.config.prefix}lb\``, `\`${client.config.prefix}points\``];
+            const pointsCmds = [`\`${client.config.prefix}lb\``, `\`${client.config.prefix}points\``, `\`${client.config.prefix}daily\``];
             const topUser = (await r.table('globalPoints').run()).sort((a, b) => b.points - a.points)[0].tag;
             const helpPoints = [
                 '__Help for **Points**__',
