@@ -10,6 +10,9 @@ module.exports = {
             obj['points'] += parseInt(args[2]);
             await db.get(target.id).update(obj).run();
             msg.channel.send(`\\✅ Updated points of ${target.tag} (**+${args[2]}**).`);
+
+
+
         } else if (args[0].toLowerCase() == 'set') {
             const target = args[1] ? msg.mentions.users.first() || client.users.get(args[1]) : false;
             if (!target) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.aliases[0] + ' ' + module.exports.meta.usage}\`\`\``);
@@ -18,6 +21,9 @@ module.exports = {
             obj['points'] = parseInt(args[2]);
             await db.get(target.id).update(obj).run();
             msg.channel.send(`\\✅ Updated points of ${target.tag} (**=${args[2]}**).`);
+
+
+            
         } else if (args[0].toLowerCase() == 'take') {
             const target = args[1] ? msg.mentions.users.first() || client.users.get(args[1]) : false;
             if (!target) return msg.channel.send(`\\❌ Invalid usage. Expected usage:\n\n\`\`\`${client.config.prefix + module.exports.meta.aliases[0] + ' ' + module.exports.meta.usage}\`\`\``);
