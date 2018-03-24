@@ -7,7 +7,9 @@ module.exports = {
             if (err) return console.error(err);
             files.forEach(file => {
                 const metaCheck = require('../commands/' + file).meta;
-                if (metaCheck.aliases.includes(args[0].toLowerCase())) me.meta = metaCheck;
+                if (metaCheck.aliases.includes(args[0].toLowerCase())) {
+                    console.log('WOAH we have a match !!11');
+                }
             });
         });
         let meta = me.meta;
