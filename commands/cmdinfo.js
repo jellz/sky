@@ -9,9 +9,9 @@ module.exports = {
                 const metaCheck = require('../commands/' + file).meta;
                 if (metaCheck.aliases.includes(args[0].toLowerCase())) {
                     console.log('WOAH we have a match !!11');
-                    console.log('me var: ' + me);
+                    console.log('me var: ' + JSON.stringify(me));
                     me.meta = metaCheck;
-                    console.log('me var after edit: ' + me);
+                    console.log('me var after edit: ' + JSON.stringify(me));
                 }
             });
         });
