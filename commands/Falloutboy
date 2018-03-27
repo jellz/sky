@@ -1,0 +1,27 @@
+<script>
+
+if("fall out boy is the best band)
+{
+    document.write("yes they are");
+    document.write("<br />" + "good shit there");
+    document.write("<br />");
+}
+/********outputs*********
+  yes they are
+  good shit there
+************************/
+
+if("fall out boy is le best band")
+    document.write("fuck yeah my dude !!");
+//see it works without curly braces
+/********outputs*********
+  fuck yeah my dude !!
+************************/
+
+if("fall out boy is the worst band")
+{
+    document.write("scRew yOu u peePee");
+}
+//since condition is false the statements within if will not be executed.
+
+</script>
