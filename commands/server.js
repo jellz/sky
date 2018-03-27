@@ -2,6 +2,7 @@ module.exports = {
     run: async (client, msg, args) => {
         const target = args[0] ? client.guilds.get(args[0]) : msg.guild;
         if (!target) return msg.channel.send('\\❌ Invalid server.');
+        if (!target.availible) return msg.channel.send('\\❌ Guild not availible.');        
         const guildDbInfo = await client.db.table('guildConfig').get(target.id).run();
         const extraInfo = {
             humans: target.memberCount - target.members.array().filter(member => member.user.bot).length,
@@ -20,7 +21,7 @@ module.exports = {
             `• is owned by **${target.owner.user.tag}**.`,
             `• is located in **${target.region.toUpperCase()}**.`,
             `• has **${target.emojis.size}** custom emojis.`,
-            `• ${target.iconURL() ? 'icon can be found @ ' + target.iconURL() : 'no server icon'}.`
+            `• ${target.iconURL() ? 'icon can be found @ ' + target.iconURL() : 'has no server icon.'}.`
         ].join('\n');
         msg.channel.send(info);
     },
