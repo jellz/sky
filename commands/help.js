@@ -33,9 +33,6 @@ module.exports = {
                 // 'Say you bet 50 points: you either win, or you lose. Winning would mean you gain 50 points. Losing would mean you lose 50 points.',
                 `The current points commands consist of: ${pointsCmds.join(' ')}.`,
                 '',
-                '**Fun fact!** If you chat in an official guild, you get a points multiplier! An example of an official guild would be **Jellz\'s Jungle**.',
-                `If you would like to join **Jellz's Jungle**, use \`${client.config.prefix}help\`.`,
-                '',
                 `Currently the user with the most Sky Points™ is **${topUser}**, see if you can overtake them!`
             ].join('\n');
             msg.channel.send(helpPoints);
