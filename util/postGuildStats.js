@@ -1,8 +1,8 @@
 module.exports = {
     run: async (client) => {
-        const snek = require('snekfetch');
-
         if (!client.config.botLists) return;
+        
+        const snek = require('snekfetch');
 
         // var prevGuild = prevGuild ? prevGuild : client.guilds.size;
         // if (prevGuild == client.guilds.size) return console.log('Did not send API request due to same amount of guilds!');

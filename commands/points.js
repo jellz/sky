@@ -1,8 +1,8 @@
 module.exports = {
     run: async (client, msg, args) => {
-        const r = client.db;
+        const db = client.db;
         if (!args[0]) {
-            var points = await r.table('globalPoints').get(msg.author.id).run();
+            var points = await db.table('globalPoints').get(msg.author.id).run();
             if (!points) {
                 msg.channel.send(`\\❌ **${msg.author.tag}** does not have a profile. Start chatting to automatically generate one. ${msg.guild.id == '110373943822540800' ? '(Discord Bots is an ignored guild!)' : ''}`);
             }
@@ -11,7 +11,7 @@ module.exports = {
             const target = msg.mentions.users.first() || client.users.get(args[0]);
             if (!target) return msg.channel.send('\\❌ Invalid users.');
             if (target.bot) return msg.channel.send('\\❌ Bots do not have Sky Points\\™.');
-            var points = await r.table('globalPoints').get(target.id).run();
+            var points = await db.table('globalPoints').get(target.id).run();
             if (!points) {
                 msg.channel.send(`\\❌ **${target.tag}** does not have a profile. Get them to start chatting to automatically generate one. ${msg.guild.id == '110373943822540800' ? '(Discord Bots is an ignored guild!)' : ''}`);
             }
