@@ -1,9 +1,9 @@
 const fs = require('fs');
 module.exports = {
     run: async (client, msg) => {
-        if (msg.author.bot) return;
-        if (!msg.guild) return;
-        if (msg.content.startsWith(client.config.prefix)) {
+        if (msg.author.bot || !msg.guild) return;
+        
+        else if (msg.content.startsWith(client.config.prefix)) {
             const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g);
             const command = args.shift().toLowerCase();
             try {
@@ -24,8 +24,8 @@ module.exports = {
         } else {
             const guildDbInfo = await client.db.table('guildConfig').get(msg.guild.id).run();
             if (guildDbInfo['official']) return require('../util/points.js').run(client, msg.author, 2);
-            if (guildDbInfo['premium']) return require('../util/points.js').run(client, msg.author, 2);
-            return require('../util/points.js').run(client, msg.author);
+            else if (guildDbInfo['premium']) return require('../util/points.js').run(client, msg.author, 2);
+            else return require('../util/points.js').run(client, msg.author);
         }
     }
 }
