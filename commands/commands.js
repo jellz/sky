@@ -8,8 +8,8 @@ module.exports = {
             files.forEach(file => {
                 const meta = require('../commands/' + file).meta;
                 const cmdname = meta.aliases[0];
-                if (msg.author.id !== client.config.ownerID) {
-                    if (!require(`../commands/${file}`).meta.ownerOnly) commands.push(client.config.prefix + cmdname);
+                if (msg.author.id !== client.config.ownerID && !require(`../commands/${file}`).meta.ownerOnly) {
+                    commands.push(client.config.prefix + cmdname);
                 } else {
                     commands.push(client.config.prefix + cmdname);
                 }
