@@ -5,7 +5,7 @@ module.exports = {
         if (!target) return msg.channel.send('\\❌ Invalid user.');
         if (!args[1]) return msg.channel.send('\\❌ Please provide a message.');
         args.shift();
-        await msg.channel.send(new MessageAttachment(await client.idiot.achievement(target.displayAvatarURL({ format: 'png', size: 128 })), args.join(' '), 'achievement.png'));
+        await msg.channel.send(new MessageAttachment(await client.idiot.achievement(target.displayAvatarURL({ format: 'png', size: 32 })), args.join(' '), 'achievement.png'));
     },
     meta: {
         aliases: ['achievement', 'achieve'],
