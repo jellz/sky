@@ -3,5 +3,6 @@
     "prefix": "",
     "ownerID": "",
     "guildLogChannel": "",
-    "cleverbotKey": ""
+    "cleverbotKey": "",
+    "idiotAPIKey": ""
 }

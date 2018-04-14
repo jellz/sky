@@ -16,6 +16,7 @@
     "discord.js": "github:hydrabolt/discord.js",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "idiotic-api": "^0.2.3",
     "moment": "^2.21.0",
     "node-opus": "^0.2.7",
     "rethinkdbdash": "^2.3.31",
