@@ -4,7 +4,7 @@ const fs = require('fs');
 client.config = require('./config.json');
 if (client.config.idiotAPIKey.length > 2) {
     const Idiot = require('idiotic-api');
-    client.idiot = new Idiot.Client(client.config.idiotAPIKey);
+    client.idiot = new Idiot.Client(client.config.idiotAPIKey, { dev: true });
 }
 client.login(client.config.token);
 client.db = require('rethinkdbdash')({ db: 'sky' });
