@@ -35,7 +35,7 @@ module.exports = {
     },
     meta: {
         aliases: ['cmdinfo', 'cmd'],
-        ownerOnly: false,
+        ownerOnly: true,
         description: 'Returns information about the specified command.',
         usage: '<%command name%>'
     }
