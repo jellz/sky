@@ -9,7 +9,7 @@ module.exports = {
     },
     meta: {
         aliases: ['achievement', 'achieve'],
-        ownerOnly: false,
+        ownerOnly: true,
         description: 'Image manipulation: achievement.',
         usage: '[%mention%|%user ID%]'
     }
