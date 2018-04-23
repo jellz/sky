@@ -20,11 +20,11 @@ I will not actively support folks who try to self-host Sky. I will not thoroughl
 
 ~~By self-hosting Sky (fork or original), you agree to the following guidelines.  ~~
 
-~~- You may not use the Sky logo or name within derivative bots.
-- You may not host a public version of Sky.
-- You may not charge for the usage of your instance of Sky **or** for the built-in currency.
-- You may not provide support for Sky.
-- You may use Sky on your Discord server as you wish as long as you follow the above guidelines.~~
+~~- You may not use the Sky logo or name within derivative bots.~~
+~~- You may not host a public version of Sky.~~
+~~- You may not charge for the usage of your instance of Sky **or** for the built-in currency.~~
+~~- You may not provide support for Sky.~~
+~~- You may use Sky on your Discord server as you wish as long as you follow the above guidelines.~~
 
 Sky has been discontinued. If you would like to host this version of Sky or fork & build upon it, you can. Just please make sure to give credit to the original author; [me.](https://github.com/jellz)
 
