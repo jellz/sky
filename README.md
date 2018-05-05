@@ -18,7 +18,7 @@ I will not actively support folks who try to self-host Sky. I will not thoroughl
 
 ### Self-hosting Agreement
 
-**EDIT**: Sky has been discontinued. If you would like to host this version of Sky or fork & build upon it, you can. Just please make sure to give credit to the original author; [me.](https://github.com/jellz)
+**EDIT**: Sky has been discontinued. If you would like to host this version of Sky or fork & build upon it, you can. Just please make sure to give credit to the original author; [me.](https://github.com/jellz) Please remove the invite link to my server from the help command, too, as my server won't offer support for user-hosted instances.
 
 ### How do I self-host Sky?
 
